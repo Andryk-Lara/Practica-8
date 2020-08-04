@@ -14,3 +14,14 @@ for(let i = 0; i < 4; i++){
     lista.className = 'lista';
 }
 
+//Creando input
+
+const inputs = document.querySelectorAll('.lista');
+
+
+for( let i = 0; i < inputs.length; i++){
+    const inputs1 = document.createElement('input');
+    inputs[i].appendChild(inputs1);
+    inputs1.className = 'input';
+}
+
