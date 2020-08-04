@@ -25,3 +25,35 @@ for( let i = 0; i < inputs.length; i++){
     inputs1.className = 'input';
 }
 
+//Dandole el tipo checkbox a los inputs
+
+const checkbox = document.querySelectorAll('.input');
+
+for(let i = 0; i < checkbox.length; i++){
+    checkbox[i].setAttribute('type', 'checkbox');
+    checkbox[i].setAttribute('id', 'tarea');
+}
+
+//Creando label
+
+const label = document.querySelectorAll('.lista');
+
+for( let i = 0; i < label.length; i++){
+    const labels = document.createElement('label');
+    label[i].appendChild(labels);
+    labels.className = 'label';
+}
+
+const atributoLabel = document.querySelectorAll('.label');
+
+for(let i = 0; i < atributoLabel.length; i++){
+    atributoLabel[i].setAttribute('for', 'tarea');
+}
+
+//Agregando las tareas
+
+const agregoTareas = document.querySelectorAll('.label');
+
+for(let i = 0; i < tareas.length; i++){
+    agregoTareas[i].innerHTML = tareas[i];
+}
